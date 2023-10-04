@@ -1,13 +1,14 @@
+'use client'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 
 const shapes = [
-  { type: 'circle', color: 'blue', size: 50 },
-  { type: 'square', color: 'green', size: 50 },
-  { type: 'triangle', color: 'red', size: 50 },
-  { type: 'rhombus', color: 'purple', size: 50 },
-  { type: 'kite', color: 'orange', size: 50 },
-  { type: 'octagon', color: 'pink', size: 50 },
+  { type: 'circle', color: 'bg-blue-500', size: 50 },
+  { type: 'square', color: 'bg-green-500', size: 50 },
+  { type: 'triangle', color: 'bg-red-500', size: 50 },
+  { type: 'rhombus', color: 'bg-purple-500', size: 50 },
+  { type: 'kite', color: 'bg-orange-500', size: 50 },
+  { type: 'octagon', color: 'bg-pink-500', size: 50 },
 ];
 
 const BouncingShapes = () => {
@@ -42,7 +43,6 @@ const BouncingShapes = () => {
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           style={{
